@@ -1,7 +1,6 @@
 import React from 'react';
 import './MealCard.css'
-const MealCard = ({ mealData }) => {
-    console.log(mealData)
+const MealCard = ({ mealData, handelCardBtn }) => {
     return (
         <div className='card-container'>
             <div className='card-image'>
@@ -13,7 +12,7 @@ const MealCard = ({ mealData }) => {
                 <h4>Meal Area: {mealData.strArea}</h4>
                 <h6><small><a href={mealData.strYoutube}>How To Cook It</a></small></h6>
             </div>
-            <button className='add-btn'>Add To Cart</button>
+            <button className='add-btn' onClick={() => handelCardBtn(mealData.idMeal)}>Add To Cart</button>
         </div>
     );
 };
