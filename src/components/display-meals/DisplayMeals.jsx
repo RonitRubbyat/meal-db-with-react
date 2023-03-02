@@ -8,7 +8,7 @@ const DisplayMeals = () => {
 
     const [cart, setCart] = useState([]);
 
-    const url = `https://www.themealdb.com/api/json/v1/1/search.php?f=a`;
+    const url = `https://www.themealdb.com/api/json/v1/1/search.php?f=s`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -22,10 +22,6 @@ const DisplayMeals = () => {
         if (!newMeal.quantity) {
             newMeal['quantity'] = 1;
         }
-        // else {
-        //     const newQuantity = newMeal.quantity + 1;
-        //     newMeal['quantity'] = newQuantity;
-        // }
         setCart([...cart, newMeal]);
     }
 

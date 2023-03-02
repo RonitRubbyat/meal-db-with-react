@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingBag } from '@fortawesome/free-solid-svg-icons'
 import './MealCard.css'
 const MealCard = ({ mealData, handelCardBtn }) => {
     return (
@@ -12,7 +14,7 @@ const MealCard = ({ mealData, handelCardBtn }) => {
                 <h4>Meal Area: {mealData.strArea}</h4>
                 <h6><small><a href={mealData.strYoutube}>How To Cook It</a></small></h6>
             </div>
-            <button className='add-btn' onClick={() => handelCardBtn(mealData.idMeal)}>Add To Cart</button>
+            <button className='add-btn' onClick={() => handelCardBtn(mealData.idMeal)}>Add To Cart <FontAwesomeIcon icon={faShoppingBag} /></button>
         </div>
     );
 };
