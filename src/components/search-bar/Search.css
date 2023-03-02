@@ -1,0 +1,15 @@
+.search-container {
+    margin: 18px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#search-input {
+    width: 50vw;
+    padding: 6px 10px;
+}
+
+.search-container button{
+    padding: 6px 10px;
+}
