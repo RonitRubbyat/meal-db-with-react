@@ -5,6 +5,7 @@ const Cart = ({ cart }) => {
     let quantity = 0;
     let total = 0;
     let shipping = 0;
+
     for (const cartData of cart) {
         quantity = quantity + cartData.quantity;
         total = cartData.price * quantity;
@@ -14,6 +15,7 @@ const Cart = ({ cart }) => {
     let Tax = total * 0.1;
 
     let grandTotal = total + shipping + parseFloat(Tax.toFixed(2));
+
     return (
         <div>
             <h2>Your Orders</h2>
