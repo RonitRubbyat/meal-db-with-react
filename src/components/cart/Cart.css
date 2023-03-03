@@ -1,0 +1,13 @@
+#remove{
+    background-color: orangered;
+    color: #fff;
+    border: 1px solid gray;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+#remove:hover{
+    color: orangered;
+    background-color: #fff;
+    cursor: pointer;
+}

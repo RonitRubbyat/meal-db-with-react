@@ -1,4 +1,5 @@
 import React from 'react';
+import './Cart.css'
 
 const Cart = ({ cart }) => {
     // console.log(cart);
@@ -16,6 +17,11 @@ const Cart = ({ cart }) => {
 
     let grandTotal = total + shipping + parseFloat(Tax.toFixed(2));
 
+    const remove = (quantity, total, shipping) => {
+        quantity = 0;
+        total = 0;
+        shipping = 0;
+    }
     return (
         <div>
             <h2>Your Orders</h2>
@@ -24,6 +30,7 @@ const Cart = ({ cart }) => {
             <h6>Shipping Charge: ${shipping}</h6>
             <h6>Tax: ${Tax}</h6>
             <h4>Grand Total: ${grandTotal}</h4>
+            <button id='remove' onClick={()=>remove(quantity,total,shipping)}>Delete Orders</button>
         </div>
     );
 };
